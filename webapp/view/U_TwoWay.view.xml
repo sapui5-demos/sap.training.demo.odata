@@ -1,7 +1,7 @@
 <mvc:View controllerName="sap.training.controller.U_TwoWay" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns:f="sap.ui.layout.form" xmlns="sap.ui.commons">
 
-	<t:Table title="Products" rows="{/Products}" rowSelectionChange="onProductChange">
+	<t:Table title="Products" rows="{/Products}" rowSelectionChange="onProductChange" selectionMode="Single">
         <t:columns>
             <t:Column>
                 <t:label>

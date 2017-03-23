@@ -1,7 +1,7 @@
 <mvc:View controllerName="sap.training.controller.Accessing_Data_From_Model" xmlns:core="sap.ui.core"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns="sap.ui.commons">
 
-	<t:Table title="Products"  rowSelectionChange="onRowChange" rows="{/Products}">
+	<t:Table title="Products"  rowSelectionChange="onRowChange" rows="{/Products}" selectionMode="Single">
 		<t:columns>
 			<t:Column>
 				<t:label>

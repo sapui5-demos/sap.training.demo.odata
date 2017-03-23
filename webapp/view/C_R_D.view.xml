@@ -2,7 +2,7 @@
 	xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns:f="sap.ui.layout.form" xmlns="sap.ui.commons"
 	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
 
-	<t:Table title="Products" rows="{/Products}">
+	<t:Table title="Products" rows="{/Products}" selectionMode="Single">
         <t:columns>
             <t:Column>
                 <t:label>

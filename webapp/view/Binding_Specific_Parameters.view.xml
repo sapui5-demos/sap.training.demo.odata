@@ -1,7 +1,7 @@
 <mvc:View controllerName="sap.training.controller.Binding_Specific_Parameters" xmlns:core="sap.ui.core"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns="sap.ui.commons">
 
-	<t:Table rows="{path: '/Products', parameters: {expand:'Category, Supplier'} }" title="Products - expand:'Category, Supplier'">
+	<t:Table rows="{path: '/Products', parameters: {expand:'Category, Supplier'} }" title="Products - expand:'Category, Supplier'" selectionMode="Single">
 		<t:columns>
 			<t:Column>
 				<t:label>
@@ -77,7 +77,7 @@
 			</t:Column>
 		</t:columns>
 	</t:Table>
-	<t:Table rows="{path: '/Products', parameters: {select:'Name, Description'} }" title="Products - select:'Name, Description'">
+	<t:Table rows="{path: '/Products', parameters: {select:'Name, Description'} }" title="Products - select:'Name, Description'" selectionMode="Single">
 		<t:columns>
 			<t:Column>
 				<t:label>
@@ -98,7 +98,7 @@
 		</t:columns>
 	</t:Table>
 	<t:Table rows="{path: '/Products', parameters: {expand:'Category, Supplier', select: '*, Category/Name, Supplier/Name'} }"
-		title="Products - expand:'Category, Supplier', select: '*, Category/Name, Supplier/Name'">
+		title="Products - expand:'Category, Supplier', select: '*, Category/Name, Supplier/Name'" selectionMode="Single">
 		<t:columns>
 			<t:Column>
 				<t:label>
@@ -174,7 +174,7 @@
 			</t:Column>
 		</t:columns>
 	</t:Table>
-	<t:Table rows="{path: '/GetProductsByRating', parameters: {custom: {'rating': '3'} } }" title="GetProductsByRating">
+	<t:Table rows="{path: '/GetProductsByRating', parameters: {custom: {'rating': '3'} } }" title="GetProductsByRating" selectionMode="Single">
 		<t:columns>
 			<t:Column>
 				<t:label>
