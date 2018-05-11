@@ -2,13 +2,17 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/odata/v2/ODataModel",
 	"sap/ui/model/json/JSONModel",
-	"sap/m/MessageToast"
-], function(Controller, ODataModel, JSONModel, MessageToast) {
+	"sap/m/MessageToast",
+	"sap/ui/Device"
+], function(Controller, ODataModel, JSONModel, MessageToast, Device) {
 	"use strict";
 
 	return Controller.extend("sap.training.controller.U_OneWay", {
 
 		onInit: function() {
+
+			// apply compact density if touch is not supported, the standard cozy design otherwise
+			this.getView().addStyleClass(Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact");
 
 			var sUrl = "/destinations/ODATA_ORG/V2/(S(5bvlqi3vwckp2c2pz5edfcgb))/OData/OData.svc/";
 			var oModel = new ODataModel(sUrl);

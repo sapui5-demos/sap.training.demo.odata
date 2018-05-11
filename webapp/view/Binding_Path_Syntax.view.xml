@@ -1,20 +1,20 @@
 <mvc:View controllerName="sap.training.controller.Binding_Path_Syntax" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons">
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	
-	<f:SimpleForm>
+	<f:SimpleForm editable="true">
 		<f:content>
 			<Label text="Category"/>
-			<ComboBox items="{/Categories}" change="onCategoryChange">
-				<items>
-					<core:ListItem text="{Name}"/>
-				</items>
-			</ComboBox>
-			<Label text="Products"/>
-			<ListBox id="ProductsLB" items="{Products}" visibleItems="6">
+			<ComboBox items="{/Categories}" selectionChange="onCategoryChange">
 				<items>
 					<core:Item text="{Name}"/>
 				</items>
-			</ListBox>
+			</ComboBox>
+			<Label text="Products"/>
+			<List id="idProductList" items="{Products}">
+				<items>
+					<StandardListItem title="{Name}"/>
+				</items>
+			</List>
 		</f:content>
 		<f:title>
 			<core:Title text="Demo OData-Model"/>

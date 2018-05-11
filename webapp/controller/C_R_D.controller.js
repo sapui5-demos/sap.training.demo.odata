@@ -2,13 +2,17 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/odata/v2/ODataModel",
 	"sap/ui/model/json/JSONModel",
-	"sap/m/MessageToast"
-], function(Controller, ODataModel, JSONModel, MessageToast) {
+	"sap/m/MessageToast",
+	"sap/ui/Device"
+], function(Controller, ODataModel, JSONModel, MessageToast, Device) {
 	"use strict";
 
 	return Controller.extend("sap.training.controller.C_R_D", {
 
 		onInit: function() {
+
+			// apply compact density if touch is not supported, the standard cozy design otherwise
+			this.getView().addStyleClass(Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact");
 
 			var sUrl = "/destinations/ODATA_ORG/V2/(S(3yfvnc35gesha001zxni5fij))/OData/OData.svc/";
 			var oModel = new ODataModel(sUrl);
@@ -37,7 +41,7 @@ sap.ui.define([
 		},
 
 		onDeleteProduct: function(oEvent) {
-			var productId = oEvent.getSource().data("id");
+			var productId = oEvent.getSource().data("productId");
 
 			// Send OData Delete request
 			var oModel = this.getView().getModel();

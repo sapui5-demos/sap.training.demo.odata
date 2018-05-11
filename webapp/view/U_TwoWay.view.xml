@@ -1,131 +1,80 @@
 <mvc:View controllerName="sap.training.controller.U_TwoWay" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns:f="sap.ui.layout.form" xmlns="sap.ui.commons">
-
-	<t:Table title="Products" rows="{/Products}" rowSelectionChange="onProductChange" selectionMode="Single">
-        <t:columns>
-            <t:Column>
-                <t:label>
-                    <Label text="Id"/>
-                </t:label>
-                <t:template>
-                    <TextView text="{ID}"/>
-                </t:template>
-            </t:Column>
-
-            <t:Column>
-                <t:label>
-                    <Label text="Name"/>
-                </t:label>
-                <t:template>
-                    <TextView text="{Name}"/>
-                </t:template>
-            </t:Column>
-            
-            <t:Column>
-                <t:label>
-                    <Label text="Description"/>
-                </t:label>
-                <t:template>
-                    <TextView text="{Description}"/>
-                </t:template>
-            </t:Column>
-            
-            <t:Column>
-                <t:label>
-                    <Label text="Release Date"/>
-                </t:label>
-                <t:template>
-                    <TextView text="{
-                        path: 'ReleaseDate',
-                        type: 'sap.ui.model.type.Date',
-                        formatOptions: {style: 'medium' }
-                    }"/>
-                </t:template>
-            </t:Column>
-            
-            <t:Column>
-                <t:label>
-                    <Label text="Discontinued Date"/>
-                </t:label>
-                <t:template>
-                     <TextView text="{
-                        path: 'DiscontinuedDate',
-                        type: 'sap.ui.model.type.Date',
-                        formatOptions: {style: 'medium' }
-                    }"/>
-                </t:template>
-            </t:Column>
-            
-             <t:Column>
-                <t:label>
-                    <Label text="Rating"/>
-                </t:label>
-                <t:template>
-                   <RatingIndicator editable="false"
-                                    value="{Rating}"/>
-                </t:template>
-            </t:Column>
-            
-             <t:Column>
-                <t:label>
-                    <Label text="Price"/>
-                </t:label>
-                <t:template>
-                    <TextView text="{
-                        path: 'Price',
-                        type: 'sap.ui.model.type.Float',
-                        formatOptions: {minFractionDigits: 2, maxFractionDigits: 2}
-                    }"/>
-                </t:template>
-            </t:Column>
-
-        </t:columns>
-    </t:Table>
-    
- 
-    
-    <f:SimpleForm  id="ProductForm">
-		<f:content>
-	        <core:Title text="Update Product" />
-	        
-	        <Label text="Id"/>
-		    <TextField  value="{ID}" editable="false" />
-		    
-		    <Label text="Name"/>
-		    <TextField value="{Name}"/>
-		    
-		    <Label text="Description"/>
-		    <TextField value="{Description}"/>
-		    
-		    <Label text="Release Date"/>
-		    <DatePicker value="{
-		        path: 'ReleaseDate',
-		        type: 'sap.ui.model.type.Date'
-		    }"/>
-		    
-		    <Label text="Discontinued Date"/>
-		    <DatePicker value="{
-		        path: 'DiscontinuedDate',
-		        type: 'sap.ui.model.type.Date'
-		    }"/>
-		    
-		     <Label text="Rating"/>
-		     <RatingIndicator value="{Rating}"/>
+	xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns="sap.m">
+	
+	<l:VerticalLayout class="sapUiLargeMargin">
+		<l:content>
 			
-			<Label text="Price"/>
-			<TextField value="{
-                        path: 'Price',
-                        type: 'sap.ui.model.type.Float',
-                        formatOptions: {minFractionDigits: 2, maxFractionDigits: 2},
-                        constraints: {minimum: 0}
-                    }"/>
-                    
-            <Label text=""/>
-        	<Button text="Save" press="onSaveProduct" width="150px"/>
-        	<Button text="Reset" press="onResetProduct" width="150px"/>
-            
-		</f:content>
-		
-	</f:SimpleForm>
+			<t:Table title="Products" rows="{/Products}" selectionMode="Single">
+				<t:columns>
+					<t:Column>
+						<t:label>
+							<Label text="Id"/>
+						</t:label>
+						<t:template>
+							<Input value="{ID}" editable="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column>
+						<t:label>
+							<Label text="Name"/>
+						</t:label>
+						<t:template>
+							<Input value="{Name}"/>
+						</t:template>
+					</t:Column>
+					<t:Column>
+						<t:label>
+							<Label text="Description"/>
+						</t:label>
+						<t:template>
+							<Input value="{Description}"/>
+						</t:template>
+					</t:Column>
+					<t:Column>
+						<t:label>
+							<Label text="Release Date"/>
+						</t:label>
+						<t:template>
+							<DatePicker value="{ path: 'ReleaseDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
+						</t:template>
+					</t:Column>
+					<t:Column>
+						<t:label>
+							<Label text="Discontinued Date"/>
+						</t:label>
+						<t:template>
+							<DatePicker value="{ path: 'DiscontinuedDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
+						</t:template>
+					</t:Column>
+					<t:Column>
+						<t:label>
+							<Label text="Rating"/>
+						</t:label>
+						<t:template>
+							<RatingIndicator editable="true" value="{Rating}"/>
+						</t:template>
+					</t:Column>
+					<t:Column>
+						<t:label>
+							<Label text="Price"/>
+						</t:label>
+						<t:template>
+							<Input value="{ path: 'Price', type: 'sap.ui.model.type.String' }"/>
+						</t:template>
+					</t:Column>
+				</t:columns>
+				
+				<t:extension>
+					<Toolbar>
+						<content>
+							<Button icon="sap-icon://save" text="Save Changes" press="onSaveProduct"/>
+							<Button icon="sap-icon://reset" text="Reset Changes" press="onResetProduct"/>
+						</content>
+					</Toolbar>
+				</t:extension>
+			</t:Table>
+			
+		</l:content>
+	</l:VerticalLayout>
 	
 </mvc:View>

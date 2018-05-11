@@ -1,14 +1,14 @@
 <mvc:View controllerName="sap.training.controller.Binding_Specific_Parameters" xmlns:core="sap.ui.core"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns="sap.ui.commons">
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns:l="sap.ui.layout" xmlns="sap.m">
 
-	<t:Table rows="{path: '/Products', parameters: {expand:'Category, Supplier'} }" title="Products - expand:'Category, Supplier'" selectionMode="Single">
+	<t:Table rows="{path: '/Products', parameters: {expand:'Category, Supplier'} }" title="Products - expand:'Category, Supplier'" selectionMode="Single" class="sapUiLargeMargin">
 		<t:columns>
 			<t:Column>
 				<t:label>
 					<Label text="Id"/>
 				</t:label>
 				<t:template>
-					<TextView text="{ID}"/>
+					<Text text="{ID}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -16,7 +16,7 @@
 					<Label text="Name"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Name}"/>
+					<Text text="{Name}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -24,7 +24,7 @@
 					<Label text="Description"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Description}"/>
+					<Text text="{Description}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -32,7 +32,7 @@
 					<Label text="Release Date"/>
 				</t:label>
 				<t:template>
-					<TextView text="{ path: 'ReleaseDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
+					<Text text="{ path: 'ReleaseDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -40,7 +40,7 @@
 					<Label text="Discontinued Date"/>
 				</t:label>
 				<t:template>
-					<TextView text="{ path: 'DiscontinuedDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
+					<Text text="{ path: 'DiscontinuedDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -56,7 +56,7 @@
 					<Label text="Price"/>
 				</t:label>
 				<t:template>
-					<TextView text="{ path: 'Price', type: 'sap.ui.model.type.Float', formatOptions: {minFractionDigits: 2, maxFractionDigits: 2} }"/>
+					<Text text="{ path: 'Price', type: 'sap.ui.model.type.Float', formatOptions: {minFractionDigits: 2, maxFractionDigits: 2} }"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -64,7 +64,7 @@
 					<Label text="Category"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Category/Name}"/>
+					<Text text="{Category/Name}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -72,19 +72,19 @@
 					<Label text="Supplier"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Supplier/Name}"/>
+					<Text text="{Supplier/Name}"/>
 				</t:template>
 			</t:Column>
 		</t:columns>
 	</t:Table>
-	<t:Table rows="{path: '/Products', parameters: {select:'Name, Description'} }" title="Products - select:'Name, Description'" selectionMode="Single">
+	<t:Table rows="{path: '/Products', parameters: {select:'Name, Description'} }" title="Products - select:'Name, Description'" selectionMode="Single" class="sapUiLargeMargin">
 		<t:columns>
 			<t:Column>
 				<t:label>
 					<Label text="Name"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Name}"/>
+					<Text text="{Name}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -92,20 +92,20 @@
 					<Label text="Description"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Description}"/>
+					<Text text="{Description}"/>
 				</t:template>
 			</t:Column>
 		</t:columns>
 	</t:Table>
 	<t:Table rows="{path: '/Products', parameters: {expand:'Category, Supplier', select: '*, Category/Name, Supplier/Name'} }"
-		title="Products - expand:'Category, Supplier', select: '*, Category/Name, Supplier/Name'" selectionMode="Single">
+		title="Products - expand:'Category, Supplier', select: '*, Category/Name, Supplier/Name'" selectionMode="Single" class="sapUiLargeMargin">
 		<t:columns>
 			<t:Column>
 				<t:label>
 					<Label text="Id"/>
 				</t:label>
 				<t:template>
-					<TextView text="{ID}"/>
+					<Text text="{ID}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -113,7 +113,7 @@
 					<Label text="Name"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Name}"/>
+					<Text text="{Name}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -121,7 +121,7 @@
 					<Label text="Description"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Description}"/>
+					<Text text="{Description}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -129,7 +129,7 @@
 					<Label text="Release Date"/>
 				</t:label>
 				<t:template>
-					<TextView text="{ path: 'ReleaseDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
+					<Text text="{ path: 'ReleaseDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -137,7 +137,7 @@
 					<Label text="Discontinued Date"/>
 				</t:label>
 				<t:template>
-					<TextView text="{ path: 'DiscontinuedDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
+					<Text text="{ path: 'DiscontinuedDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -153,7 +153,7 @@
 					<Label text="Price"/>
 				</t:label>
 				<t:template>
-					<TextView text="{ path: 'Price', type: 'sap.ui.model.type.Float', formatOptions: {minFractionDigits: 2, maxFractionDigits: 2} }"/>
+					<Text text="{ path: 'Price', type: 'sap.ui.model.type.Float', formatOptions: {minFractionDigits: 2, maxFractionDigits: 2} }"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -161,7 +161,7 @@
 					<Label text="Category"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Category/Name}"/>
+					<Text text="{Category/Name}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -169,19 +169,19 @@
 					<Label text="Supplier"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Supplier/Name}"/>
+					<Text text="{Supplier/Name}"/>
 				</t:template>
 			</t:Column>
 		</t:columns>
 	</t:Table>
-	<t:Table rows="{path: '/GetProductsByRating', parameters: {custom: {'rating': '3'} } }" title="GetProductsByRating" selectionMode="Single">
+	<t:Table rows="{path: '/GetProductsByRating', parameters: {custom: {'rating': '3'} } }" title="GetProductsByRating" selectionMode="Single" class="sapUiLargeMargin">
 		<t:columns>
 			<t:Column>
 				<t:label>
 					<Label text="Id"/>
 				</t:label>
 				<t:template>
-					<TextView text="{ID}"/>
+					<Text text="{ID}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -189,7 +189,7 @@
 					<Label text="Name"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Name}"/>
+					<Text text="{Name}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -197,7 +197,7 @@
 					<Label text="Description"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Description}"/>
+					<Text text="{Description}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -205,7 +205,7 @@
 					<Label text="Release Date"/>
 				</t:label>
 				<t:template>
-					<TextView text="{ path: 'ReleaseDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
+					<Text text="{ path: 'ReleaseDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -213,7 +213,7 @@
 					<Label text="Discontinued Date"/>
 				</t:label>
 				<t:template>
-					<TextView text="{ path: 'DiscontinuedDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
+					<Text text="{ path: 'DiscontinuedDate', type: 'sap.ui.model.type.Date', formatOptions: {style: 'medium' } }"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -229,10 +229,10 @@
 					<Label text="Price"/>
 				</t:label>
 				<t:template>
-					<TextView text="{ path: 'Price', type: 'sap.ui.model.type.Float', formatOptions: {minFractionDigits: 2, maxFractionDigits: 2} }"/>
+					<Text text="{ path: 'Price', type: 'sap.ui.model.type.Float', formatOptions: {minFractionDigits: 2, maxFractionDigits: 2} }"/>
 				</t:template>
 			</t:Column>
 		</t:columns>
 	</t:Table>
-	
+
 </mvc:View>

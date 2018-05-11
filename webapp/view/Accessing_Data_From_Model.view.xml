@@ -1,14 +1,14 @@
 <mvc:View controllerName="sap.training.controller.Accessing_Data_From_Model" xmlns:core="sap.ui.core"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns="sap.ui.commons">
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns="sap.m">
 
-	<t:Table title="Products"  rowSelectionChange="onRowChange" rows="{/Products}" selectionMode="Single">
+	<t:Table title="Products"  rowSelectionChange="onRowChange" rows="{/Products}" selectionMode="Single" class="sapUiLargeMargin">
 		<t:columns>
 			<t:Column>
 				<t:label>
 					<Label text="Id"/>
 				</t:label>
 				<t:template>
-					<TextView text="{ID}"/>
+					<Text text="{ID}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -16,7 +16,7 @@
 					<Label text="Name"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Name}"/>
+					<Text text="{Name}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -24,7 +24,7 @@
 					<Label text="Description"/>
 				</t:label>
 				<t:template>
-					<TextView text="{Description}"/>
+					<Text text="{Description}"/>
 				</t:template>
 			</t:Column>
 			<t:Column>
@@ -32,7 +32,7 @@
 					<Label text="Release Date"/>
 				</t:label>
 				<t:template>
-					<TextView text="{
+					<Text text="{
                         path: 'ReleaseDate',
                         type: 'sap.ui.model.type.Date',
                         formatOptions: {style: 'medium' }
@@ -44,7 +44,7 @@
 					<Label text="Discontinued Date"/>
 				</t:label>
 				<t:template>
-					<TextView text="{
+					<Text text="{
                         path: 'DiscontinuedDate',
                         type: 'sap.ui.model.type.Date',
                         formatOptions: {style: 'medium' }
@@ -65,7 +65,7 @@
 					<Label text="Price"/>
 				</t:label>
 				<t:template>
-					<TextView text="{
+					<Text text="{
                         path: 'Price',
                         type: 'sap.ui.model.type.Float',
                         formatOptions: {minFractionDigits: 2, maxFractionDigits: 2}
