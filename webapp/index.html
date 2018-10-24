@@ -18,12 +18,15 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 		<script>
-			var oView = sap.ui.view({
-								id: "idMain",
-								viewName: "sap.training.view.Binding_Specific_Parameters",
+			sap.ui.require(["sap/ui/core/mvc/View"], function(View) {
+				View.create({
+								  id: "idMain",
+							viewName: "sap.training.view.Binding_Specific_Parameters",
 								type: sap.ui.core.mvc.ViewType.XML
-						});
-			oView.placeAt("content");
+					}).then(function(oView) {
+						oView.placeAt("content");
+				});
+			});
 		</script>
 	</head>
 

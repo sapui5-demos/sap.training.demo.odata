@@ -1,5 +1,5 @@
 <mvc:View controllerName="sap.training.controller.C_R_D" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns:f="sap.ui.layout.form" xmlns="sap.m" xmlns:l="sap.ui.layout">
+	xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns:f="sap.ui.layout.form" xmlns="sap.m" xmlns:l="sap.ui.layout" class="sapUiSizeCompact">
 	
 	<l:VerticalLayout class="sapUiLargeMargin">
 		<l:content>

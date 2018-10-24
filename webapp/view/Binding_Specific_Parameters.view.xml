@@ -1,5 +1,5 @@
 <mvc:View controllerName="sap.training.controller.Binding_Specific_Parameters" xmlns:core="sap.ui.core"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns:l="sap.ui.layout" xmlns="sap.m">
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns:l="sap.ui.layout" xmlns="sap.m" class="sapUiSizeCompact">
 
 	<t:Table rows="{path: '/Products', parameters: {expand:'Category, Supplier'} }" title="Products - expand:'Category, Supplier'" selectionMode="Single" class="sapUiLargeMargin">
 		<t:columns>

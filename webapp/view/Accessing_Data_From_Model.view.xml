@@ -1,5 +1,5 @@
 <mvc:View controllerName="sap.training.controller.Accessing_Data_From_Model" xmlns:core="sap.ui.core"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns="sap.m">
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns="sap.m" class="sapUiSizeCompact">
 
 	<t:Table title="Products"  rowSelectionChange="onRowChange" rows="{/Products}" selectionMode="Single" class="sapUiLargeMargin">
 		<t:columns>

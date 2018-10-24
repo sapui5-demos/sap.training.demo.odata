@@ -9,9 +9,6 @@ sap.ui.define([
 			var sUrl = "/destinations/ODATA_ORG/V2/OData/OData.svc/";
 			var oModel = new ODataModel(sUrl);
 			this.getView().setModel(oModel);
-
-			// apply compact density if touch is not supported, the standard cozy design otherwise
-			this.getView().addStyleClass(Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact");
 		}
 
 	});

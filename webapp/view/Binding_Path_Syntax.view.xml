@@ -1,5 +1,5 @@
 <mvc:View controllerName="sap.training.controller.Binding_Path_Syntax" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" class="sapUiSizeCompact">
 	
 	<f:SimpleForm editable="true">
 		<f:content>
