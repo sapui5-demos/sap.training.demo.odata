@@ -11,3 +11,9 @@ extended_runnable_file.html
 .*/extended_runnable_file.html
 changes_preview.js
 /.user.project.json
+/mta_archives/
+AppVariant_index.html
+AppVariantPreviewPayload.zip
+mergedManifestDescriptor.json
+APIExternalProducer.js
+.*/APIExternalProducer.js
